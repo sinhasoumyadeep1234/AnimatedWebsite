@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", "sans-serif";
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+}
+
+/* giving styles to back and top div */
+#back {
+  width: 100%;
+  height: 100vh;
+  /* background-color: red; */
+}
+
+/* back image */
+#back img {
+  /* make the images take full height and width of the container */
+  width: 100%;
+  height: 100%;
+  /* make object fit cover to make the image look proper */
+  object-fit: cover;
+}
+
+/* now the top div will be overlapped on top of the back div hence we will give it position absolute and top and left 0 property*/
+#top {
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgb(137, 131, 131); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* now all of our clicks are going on the top layer but we want them to go to back layer..thus we will make the pointer event on the top as none */
+  pointer-events: none;
+}
+
+#workingArea {
+  width: 80%; /*80percent of parent div top which has 100percent width*/
+  /* as the text will be in the middle and will have some left right spacing thus giving 80% widht and then will center this div*/
+  max-width: 1920px; /*if some has more screen width than 1920px then take 1920px as max width*/
+  height: 100vh;
+  /* border: 2px solid red; */
+  /* now center this div using margin 0 auto*/
+  margin: 0 auto; /*top bottom 0px and left right auto*/
+
+  /* position relative for making its child hero in center along y axis */
+  position: relative;
+}
+
+#nav {
+  /* display flex */
+  display: flex;
+  justify-content: space-between; /*for evenly spacing the navleft and navright*/
+  align-items: center;
+  width: 100%; /*100 percent of main Area which has 80% width thus nav will have 80% width of mainArea*/
+  padding: 20px 0px; /*Top bottom padding only*/
+  /* border: 2px solid gold; */
+}
+
+#nav img {
+  height: 60px;
+}
+
+#nleft,
+#nright {
+  /* this will be a flexbox */
+  display: flex;
+  align-items: center; /*for vertical alignment*/
+  gap: 60px;
+}
+
+#nav a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  pointer-events: all; /*as we removed all the pointer events on the top layer but we want the a tags and the buttons to be clicked*/
+}
+
+#hero {
+  /* we want the hero to be in center along y axis.thus we will give it position absolute and its parent i.e. working area position relative */
+  position: absolute;
+  top: 50%; /*y axis center*/
+  left: 0;
+  transform: translate(
+    0%,
+    -50%
+  ); /*we dont want any widht transform we only want height transform*/
+
+  display: flex; /*For aliging the heroleft and right*/
+  justify-content: space-between; /*pushes elements on the both extreme end*/
+  width: 100%;
+  /* height: 100px; */
+}
+
+#heroleft {
+  min-width: 50%; /*atlest 50% width*/
+  /* height: 100px; */
+  /* background-color: yellow; */
+}
+
+#heroleft .elem {
+  position: relative; /*we want all h1 to get stacked one above another*/
+  height: 9vw;
+  /* now we dont want to show the h1 that is next comming thus overflow hidden will hide it */
+  overflow: hidden;
+  /* background-color: red; */
+}
+
+#heroleft .elem h1 {
+  /* we want the h1 to get stacked one above another */
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  line-height: 0.9;
+  font-family: "kajiro";
+  color: #fff;
+  font-weight: 100;
+  font-size: 11vw;
+}
+
+/* now show only the first h1 of each row and then change them using js */
+#heroleft .elem h1:nth-child(1) {
+  top: 0; /*to make the 1st h1 of each row above all*/
+}
+
+#heroleft button {
+  padding: 0.3vw 3vw;
+  font-size: 2.5vw;
+  font-family: "kajiro";
+  margin-top: 4vw;
+  letter-spacing: 1.4px;
+  pointer-events: all;
+}
+
+#heroright {
+  /* min-width: 25%;atlest 25% width */
+  /* height: 100px; */
+  color: #fff;
+  /* background-color: green; */
+  /* now we want all elements to go at right also the items to be placed in columns rather in row */
+  width: 17%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#heroright p {
+  font-size: 14px;
+  font-weight: 300;
+  text-align: right;
+}
+
+#heroright p:nth-child(3) {
+  margin-bottom: 100px;
+}
+
+#heroright #imageDiv {
+  width: 100%;
+  height: 170px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-image: url(https://plus.unsplash.com/premium_photo-1674069719655-7289402d71e9?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+}
+

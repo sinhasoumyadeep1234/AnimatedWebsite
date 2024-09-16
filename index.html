@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- adding shery css for using the animation -->
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ray Ban</title>
+  </head>
+  <body>
+    <!-- a main container and inside that we will have two divs one in front/top and one in back -->
+    <div id="main">
+      <div id="back">
+        <!-- now at back first we will have an image -->
+        <img src="assets/images/IMG_7564.JPG" alt="image" />
+        <img src="assets/images/IMG_7565.JPG" alt="image" />
+        <img src="assets/images/IMG_7566.JPG" alt="image" />
+        <img src="assets/images/IMG_7567.JPG" alt="image" />
+        <img src="assets/images/IMG_7568.JPG" alt="image" />
+      </div>
+      <div id="top">
+        <!-- inside top we will have a working area handling the texts -->
+        <div id="workingArea">
+          <!-- inside it we will have a navbar -->
+          <div id="nav">
+            <!-- we will have two containers left and right -->
+            <div id="nleft">
+              <!-- now we will have logo image -->
+              <img src="/assets/images/raybanlogo.png" alt="logo" />
+              <!-- two navigation buttons -->
+              <a href="/">Products</a>
+              <a href="/">About</a>
+            </div>
+            <div id="nright">
+              <!-- we will have two a tags -->
+              <a href="/">LUXE</a>
+              <a href="/">Pricing</a>
+            </div>
+          </div>
+
+          <!-- Now we will have the hero section -->
+          <div id="hero">
+            <!-- it will again have two divs left and right -->
+            <div id="heroleft">
+              <!-- 3 divs justifying 3 rows of text..and we have 5 images thus each div can have 5 values -->
+              <div class="elem">
+                <h1>Mary root</h1>
+                <h1>Susan Fox</h1>
+                <h1>Lily Maximoff</h1>
+                <h1>Caroline Wood</h1>
+                <h1>david chang</h1>
+              </div>
+
+              <div class="elem">
+                <h1>solves problems</h1>
+                <h1>wears sunglasses</h1>
+                <h1>indifferences is</h1>
+                <h1>reads thorugh</h1>
+                <h1>gives zero</h1>
+              </div>
+
+              <div class="elem">
+                <h1>with creativity.</h1>
+                <h1>with style.</h1>
+                <h1>absolute.</h1>
+                <h1>her specs.</h1>
+                <h1>funks.</h1>
+              </div>
+
+              <!-- after 3 elems we will have a button -->
+              <button>Explore Now</button>
+            </div>
+            <div id="heroright">
+              <!-- will have a paragraph -->
+              <p>Lorem ipsum dolor sit amet.</p>
+              <!-- then a empty div -->
+              <div id="imageDiv"></div>
+              <!-- then some text -->
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                odio tempore commodi distinctio deleniti quod modi consequatur
+                aliquid, at provident sed perspiciatis accusantium ipsum sequi
+                labore cumque fugit suscipit enim atque voluptatem. Similique,
+                cupiditate.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                cupiditate ducimus possimus reiciendis quam laboriosam excepturi
+                quisquam, incidunt, obcaecati delectus nostrum ipsam unde?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- shery js scripts -->
+    <!--  Gsap is needed for Basic Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Scroll Trigger is needed for Scroll Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Three.js is needed for 3d Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
+    <!-- our script file -->
+     <script src="script.js"></script>
+  </body>
+</html>
